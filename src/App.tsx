@@ -10,6 +10,7 @@ import Privacy from "./pages/Privacy";
 import Error from "./pages/Error";
 import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navigation";
+import GridBackground from "./components/GridBackground";
 
 const queryClient = new QueryClient();
 
@@ -19,15 +20,23 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="min-h-screen bg-cyber-gradient">
+        <div className="min-h-screen bg-cyber-gradient flex flex-col">
+          <GridBackground />
           <Navigation />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/error" element={<Error />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <main className="container-main">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/error" element={<Error />} />
+              <Route path="/messages" element={<NotFound />} />
+              <Route path="/users" element={<NotFound />} />
+              <Route path="/games" element={<NotFound />} />
+              <Route path="/forums" element={<NotFound />} />
+              <Route path="/admin" element={<NotFound />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
         </div>
       </BrowserRouter>
     </TooltipProvider>
