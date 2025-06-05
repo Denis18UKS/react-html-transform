@@ -99,13 +99,6 @@
     position: relative;
     overflow-x: hidden;
   }
-
-  .navbar {
-    background: rgba(10, 15, 44, 0.98) !important;
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(0, 255, 136, 0.2);
-    padding: 0.5rem 1rem;
-  }
 }
 
 /* Анимированная сетка */
@@ -174,4 +167,12 @@
   flex: 1;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   max-width: 1200px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .container-main {
+    margin: 1rem;
+    padding: 1rem;
+  }
 }
