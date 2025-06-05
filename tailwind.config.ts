@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,7 +19,19 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'orbitron': ['Orbitron', 'sans-serif'],
+				'exo': ['Exo 2', 'sans-serif'],
+			},
 			colors: {
+				'primary-dark': '#0A0F2C',
+				'primary-medium': '#1A1F3C',
+				'accent-main': '#00FF88',
+				'accent-secondary': '#00CC66',
+				'text-light': '#E0E0E0',
+				'glass-bg': 'rgba(18, 23, 52, 0.9)',
+				'card-bg': 'rgba(30, 35, 60, 0.85)',
+				'danger': '#FF4D6D',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -84,11 +97,35 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px rgba(0, 255, 136, 0.2)'
+					},
+					'50%': {
+						boxShadow: '0 0 20px rgba(0, 255, 136, 0.4)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'glow': 'glow 2s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'cyber-gradient': 'linear-gradient(135deg, #0A0F2C 0%, #1A1F3C 50%, #0A0F2C 100%)',
+				'accent-gradient': 'linear-gradient(135deg, #00FF88, #00CC66)',
 			}
 		}
 	},
